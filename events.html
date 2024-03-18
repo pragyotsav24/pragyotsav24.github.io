@@ -56,13 +56,119 @@
             border: none;
             border-radius: 5px;
         }
+
+        /*Cards */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        div,
+        input,
+        p,
+        a {
+            margin: 0px;
+        }
+
+        a,
+        a:hover,
+        a:focus {
+            color: inherit;
+        }
+
+        .container-fluid,
+        .container {
+            max-width: 1200px;
+        }
+
+        .card-container {
+            padding: 100px 0px;
+            -webkit-perspective: 1000;
+            perspective: 1000;
+        }
+
+        .profile-card-6 {
+            max-width: 300px;
+            background-color: #dcc303;
+            border-radius: 5px;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            margin: 10px auto;
+            cursor: pointer;
+        }
+
+        .profile-card-6 img {
+            transition: all 0.15s linear;
+        }
+
+        .profile-card-6 .profile-name {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #FFF;
+            padding: 15px 20px;
+            background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+            transition: all 0.15s linear;
+        }
+
+        .profile-card-6 .profile-position {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.4);
+            left: 30px;
+            top: 100px;
+            transition: all 0.15s linear;
+        }
+
+        .profile-card-6 .profile-overview {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+            color: #FFF;
+            padding: 50px 0px 20px 0px;
+            transition: all 0.15s linear;
+        }
+
+        .profile-card-6 .profile-overview h3 {
+            font-weight: bold;
+        }
+
+        .profile-card-6 .profile-overview p {
+            color: rgba(189, 146, 5, 0.7);
+        }
+
+        .profile-card-6:hover img {
+            filter: brightness(50%);
+            transform: scale(1.1);
+        }
+
+        .profile-card-6:hover .profile-name {
+            padding-left: 25px;
+            padding-top: 20px;
+        }
+
+        .profile-card-6:hover .profile-position {
+            left: 40px;
+        }
+
+        .profile-card-6:hover .profile-overview {
+            padding-bottom: 25px;
+        }
     </style>
 </head>
 
 <body>
-    <header class="smart-scroll">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-md navbar-dark ">
+
+    <header id="site-header"
+        class="bg-black text-white site-header site-header--sticky site-header--not-scrolled hs-search-hidden">
+
+        <div class="container-fluid bg-black">
+            <nav class="navbar navbar-expand-md">
                 <a href="#" class="nav-brand">
                     <img src="logos/prag_logo.png" width="50" height="50" alt="">
                 </a>
@@ -72,27 +178,28 @@
                 <a href="# nav-brand">
                     <img src="logos/iete_logo.png" width="50" height="50" alt="">
                 </a>
-                <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
-                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span data-feather="grid"></span>
-                </button>
-                <div class="collapse navbar-collapse " id="navbarCollapse">
-                    <ul class="navbar-nav ml-auto ms-auto">
+
+                <div class="collapse navbar-collapse text-white" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto ms-auto text-white ">
                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#home">Home</a>
+
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link page-scroll text-white" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#aboutus">About</a>
+                            <a class="nav-link page-scroll text-white" href="#aboutus">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#events">Events</a>
+                            <a class="nav-link page-scroll text-white" href="#events">Events</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#presenters">Our presenters</a>
+                            <a class="nav-link page-scroll text-white" href="#presenters">Our presenters</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#contactus">Contact Us</a>
+                            <a class="nav-link page-scroll text-white" href="#contactus">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
                         </li>
 
                     </ul>
@@ -101,14 +208,64 @@
         </div>
     </header>
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1 class="text-uppercase">Pragyotsav 2024</h1>
-                <h2>Easwari Engineering College</h2>
-                <p>National Level Technical Symposium</p>
-                <a href="#" class="register-btn">Register Now</a>
+        <hr width="80%" style="left:10%;position:relative;">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="card profile-card-6 ">
+                        <a href="#"><img src="circuithon.png" class="card-img-top" alt="Poster" href></a>
+                        <h5 class="card-title profile-name text-white">Circuithon</h5>
+
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card profile-card-6 ">
+                        <a href="#"><img src="pacbot.jpg" class="card-img-top" alt="Poster" href></a>
+                        <h5 class="card-title profile-name text-white">Pacbot</h5>
+
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card profile-card-6 ">
+                        <a href="#"><img src="paperpresentation.png" class="card-img-top" alt="Poster" href></a>
+                        <h5 class="card-title profile-name text-white">Paper Presentation</h5>
+
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card profile-card-6 ">
+                        <a href="#"><img src="QuizpecableMe.png" class="card-img-top" alt="Poster" href></a>
+                        <h5 class="card-title profile-name text-white">QuizpecableMe</h5>
+
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card profile-card-6 ">
+                        <a href="#"><img src="Robo.png" class="card-img-top" alt="Poster" href></a>
+                        <h5 class="card-title profile-name text-white">Robo Line Follower</h5>
+
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card profile-card-6 ">
+                        <a href="#"><img src="StyleSoldering.png" class="card-img-top" alt="Poster" href></a>
+                        <h5 class="card-title profile-name text-white">StyleSoldering</h5>
+
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card profile-card-6 ">
+                        <a href="#"><img src="PromptPulse.png" class="card-img-top" alt="Poster" href></a>
+                        <h5 class="card-title profile-name text-white">PromptPulse</h5>
+
+                    </div>
+                </div>
+
             </div>
-        </section>
+        </div>
+
     </main>
 </body>
 
