@@ -14,13 +14,40 @@
         crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Animation -->
+<style>
+    .ani {
+        position: center;
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20%;
+        margin-bottom: 15%;
+    }
+
+    @media screen and (max-width: 600px) {
+        .ani {
+            width: 50px;
+            height: 50px;
+            margin-top: 95%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+</style>
 
 
     <style>
         h1 {
             font: normal 700 90px/0.89 Barlow Condensed, Helvetica Neue, Helvetica, Arial, sans-serif
         }
-
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
         body {
             margin: 0;
             font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -164,7 +191,13 @@ a:focus {
 </head>
 
 <body >
-    
+    <div id="loading-screen" style="display: block;">
+        <!-- Include content from ani.html directly -->
+        <div>
+            <img class="ani" id="ani" src="logo.gif" />
+        </div>
+    </div>
+<div class="main" id="main-content" style="display: none;">
     <header id="site-header" class="bg-black text-white site-header site-header--sticky site-header--not-scrolled hs-search-hidden">
         
         <div class="container-fluid bg-black">
@@ -224,7 +257,7 @@ a:focus {
                 </div>
                 <div class="col-md-4 ">
                     <div class="card profile-card-6 ">
-                        <a href="pacbot.html"><img src="pacbot.jpg" class="card-img-top" alt="Poster" href></a>
+                        <a href="pacbot.html"><img src="pacbot.png" class="card-img-top" alt="Poster" href></a>
                         <h5 class="card-title profile-name text-white">Pacbot</h5>
                 
                     </div>
@@ -269,6 +302,28 @@ a:focus {
         </div>
 
     </main>
+    <hr width="80%" style="left:10%;position:relative;">
+    <footer class="bg-black text-center">
+        <!-- Copyright -->
+        <p>©Pragyotsav24. All rights reserved.</p>
+    
+        <p><span style="color: #FF00D4">♥</span> <a href="https://www.linkedin.com/in/srivatsan-sk">Desgined and Developed
+                by
+                Srivatsan Sk</a>
+        </p>
+        <!-- Copyright -->
+    </footer>
+</div>
+    <script>
+        function hideLoadingScreen() {
+            const loadingScreen = document.getElementById("loading-screen");
+            const mainContent = document.getElementById("main-content");
+
+            loadingScreen.style.display = "none";
+            mainContent.style.display = "block";
+        }
+        setTimeout(hideLoadingScreen, 3000);
+    </script>
 </body>
 
 </html>
