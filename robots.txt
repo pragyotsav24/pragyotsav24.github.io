@@ -1,0 +1,8 @@
+#Created By Srivatsan Sk
+
+User-agent: *
+Disallow: 
+Disallow: /404.html
+Disallow: /500.html
+Disallow: /logos/
+Disallow: /hs-fs/
