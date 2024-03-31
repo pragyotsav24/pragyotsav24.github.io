@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venues</title>
+    <meta name="description"
+        content="Pragyotsav is a national-level technical, technical, technical, event conducted by the IETE forum of Easwari Engineering College.">
+    <meta property="og:image" content="logos/prag_logo.png">
+    <meta property="og:title" content="Events" />
+    <meta property="og:site_name" content="Pragyotsav" />
+    <meta property="og:type" content="website" />
+    <meta property="og:developer" content="Srivatsan Sk" />
+    <meta property="og:author" content="Srivatsan Sk" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Animation -->
+    <style>
+        .ani {
+            position: center;
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20%;
+            margin-bottom: 15%;
+        }
+
+        @media screen and (max-width: 600px) {
+            .ani {
+                width: 50px;
+                height: 50px;
+                margin-top: 95%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+
+
+    <style>
+        h1 {
+            font: normal 700 90px/0.89 Barlow Condensed, Helvetica Neue, Helvetica, Arial, sans-serif
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #CFD8DC;
+            text-align: left;
+            background-color: #000000;
+        }
+
+        /* Hero Styles */
+        .hero {
+            background-image: url('hero-background.jpg');
+            /* Your background image here */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero p {
+            margin-bottom: 30px;
+        }
+
+        .register-btn {
+            background-color: #007bff;
+            /* Example button color */
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /*Cards */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        div,
+        input,
+        p,
+        a {
+            margin: 0px;
+        }
+
+        a,
+        a:hover,
+        a:focus {
+            color: inherit;
+        }
+
+        .container-fluid,
+        .container {
+            max-width: 1200px;
+        }
+
+        .card-container {
+            padding: 100px 0px;
+            -webkit-perspective: 1000;
+            perspective: 1000;
+        }
+
+        .profile-card-6 {
+            max-width: 300px;
+            background-color: #dcc303;
+            border-radius: 5px;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            margin: 10px auto;
+            cursor: pointer;
+        }
+
+        .profile-card-6 img {
+            transition: all 0.15s linear;
+        }
+
+        .profile-card-6 .profile-name {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #FFF;
+            padding: 15px 20px;
+            background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+            transition: all 0.15s linear;
+        }
+
+        .profile-card-6 .profile-position {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.4);
+            left: 30px;
+            top: 100px;
+            transition: all 0.15s linear;
+        }
+
+        .profile-card-6 .profile-overview {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+            color: #FFF;
+            padding: 50px 0px 20px 0px;
+            transition: all 0.15s linear;
+        }
+
+        .profile-card-6 .profile-overview h3 {
+            font-weight: bold;
+        }
+
+        .profile-card-6 .profile-overview p {
+            color: rgba(189, 146, 5, 0.7);
+        }
+
+        .profile-card-6:hover img {
+            filter: brightness(50%);
+            transform: scale(1.1);
+        }
+
+        .profile-card-6:hover .profile-name {
+            padding-left: 25px;
+            padding-top: 20px;
+        }
+
+        .profile-card-6:hover .profile-position {
+            left: 40px;
+        }
+
+        .profile-card-6:hover .profile-overview {
+            padding-bottom: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading-screen" style="display: block;">
+        <!-- Include content from ani.html directly -->
+        <div>
+            <img class="ani" id="ani" src="logo.gif" />
+        </div>
+    </div>
+    <div class="main" id="main-content" style="display: none;">
+        <header id="site-header"
+            class="bg-black text-white site-header site-header--sticky site-header--not-scrolled hs-search-hidden">
+
+            <div class="container-fluid bg-black">
+                <nav class="navbar navbar-expand-md">
+                    <a href="index.html" class="nav-brand">
+                        <img src="logos/prag_logo.png" width="50" height="50" alt="">
+                    </a>
+                    <a href="index.html" class="mx-3 nav-brand">
+                        <img src="logos/eec_logo.png" width="50" height="50" alt="">
+                    </a>
+                    <a href="index.html">
+                        <img src="logos/iete_logo.png" width="50" height="50" alt="">
+                    </a>
+
+                    <div class="collapse navbar-collapse text-white" id="navbarCollapse">
+                        <ul class="navbar-nav ml-auto ms-auto text-white ">
+                            <li class="nav-item">
+
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link page-scroll text-white" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link page-scroll text-white" href="index.html#aboutus">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link page-scroll text-white" href="#">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link page-scroll text-white" href="index.html#Sponsors">Our Sponsors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link page-scroll text-white"
+                                    href="mailto:eec.ieteforum@gmail.com?subject=Contact%20Us%20Website">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+            <hr width="80%" style="left:10%;position:relative;">
+
+        <main class="container ">
+
+            <div class="accordion accordion-flush bg-black text-white" id="accordionFlushExample">
+                <div class="accordion-item bg-black text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                            aria-controls="flush-collapseOne">
+                            Inaguration
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse bg-black text-white"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">TRP Auditorium, Easwari Engineering College
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-black text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                            aria-controls="flush-collapseTwo">
+                            Promt Pulse
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse bg-black text-white"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">TRP Auditorium, Easwari Engineering College
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-black text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Paper Presentation
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse bg-black text-white"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Galary hall, Civil Block, 4th floor, Easwari Engineering College
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-black text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                            Robo Line Follower
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse bg-black text-white"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">HiTech Hall 1, Easwari Engineering College
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-black text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive">
+                            AWS Cloud Computing Workshop
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse bg-black text-white"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">MBA Seminar Hall, Civil Block, 7th floor, Easwari Engineering
+                            College
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-black text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false"
+                            aria-controls="flush-collapseSix">
+                            QuizpicableMe
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse bg-black text-white"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">HiTech Hall 2 , Easwari Engineering College
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-black text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                            Pacbot
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSeven" class="accordion-collapse collapse bg-black text-white"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Seminar Hall, Electronics Block, 6th floor, Easwari Engineering College
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-black text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                            Circuthon
+                        </button>
+                    </h2>
+                    <div id="flush-collapseEight" class="accordion-collapse collapse bg-black text-white"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Main Block, 5th floor, Easwari Engineering College
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-black text-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                           Style Soldering
+                        </button>
+                    </h2>
+                    <div id="flush-collapseNine" class="accordion-collapse collapse bg-black text-white"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Main Block, 5th floor, Easwari Engineering College
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main><br>
+        <hr width="80%" style="left:10%;position:relative;">
+        <footer class="bg-black text-center">
+            <!-- Copyright -->
+            <p>©Pragyotsav24. All rights reserved.</p>
+
+            <p><span style="color: #FF00D4">♥</span> <a href="https://www.linkedin.com/in/srivatsan-sk">Desgined and
+                    Developed
+                    by
+                    Srivatsan Sk</a>
+            </p>
+            <!-- Copyright -->
+        </footer>
+    </div>
+    <script>
+        function hideLoadingScreen() {
+            const loadingScreen = document.getElementById("loading-screen");
+            const mainContent = document.getElementById("main-content");
+
+            loadingScreen.style.display = "none";
+            mainContent.style.display = "block";
+        }
+        setTimeout(hideLoadingScreen, 3000);
+    </script>
+</body>
+
+</html>
